@@ -1,0 +1,11 @@
+D:\Practice\UnitTests\UnitTests\bin\Debug\UnitTests.exe.config
+D:\Practice\UnitTests\UnitTests\bin\Debug\UnitTests.exe
+D:\Practice\UnitTests\UnitTests\bin\Debug\UnitTests.pdb
+D:\Practice\UnitTests\UnitTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\Practice\UnitTests\UnitTests.exe.config
+D:\Practice\UnitTests\bin\UnitTests.exe.config
+D:\Practice\UnitTests\bin\UnitTests.exe
+D:\Practice\UnitTests\bin\UnitTests.pdb
+D:\Practice\UnitTests\UnitTests\obj\Debug\UnitTests.Library.csprojResolveAssemblyReference.cache
+D:\Practice\UnitTests\UnitTests\obj\Debug\UnitTests.exe
+D:\Practice\UnitTests\UnitTests\obj\Debug\UnitTests.pdb

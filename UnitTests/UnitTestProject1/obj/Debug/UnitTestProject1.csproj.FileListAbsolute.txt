@@ -1,0 +1,10 @@
+D:\Practice\UnitTests\UnitTestProject1\bin\Debug\UnitTestProject1.dll
+D:\Practice\UnitTests\UnitTestProject1\bin\Debug\UnitTestProject1.pdb
+D:\Practice\UnitTests\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\Practice\UnitTests\UnitTestProject1\bin\Debug\UnitTests.exe
+D:\Practice\UnitTests\UnitTestProject1\bin\Debug\UnitTests.pdb
+D:\Practice\UnitTests\bin\UnitTestProject1.dll
+D:\Practice\UnitTests\bin\UnitTestProject1.pdb
+D:\Practice\UnitTests\UnitTestProject1\obj\Debug\UnitTestProject1.dll
+D:\Practice\UnitTests\UnitTestProject1\obj\Debug\UnitTestProject1.pdb
+D:\Practice\UnitTests\UnitTestProject1\obj\Debug\UnitTestProject1.csprojResolveAssemblyReference.cache

@@ -1,0 +1,5 @@
+D:\Practice\UnitTests\bin\CheckAdditionTest.dll
+D:\Practice\UnitTests\bin\CheckAdditionTest.pdb
+D:\Practice\UnitTests\CheckAdditionTest\obj\Debug\CheckAddition.Test.csprojResolveAssemblyReference.cache
+D:\Practice\UnitTests\CheckAdditionTest\obj\Debug\CheckAdditionTest.dll
+D:\Practice\UnitTests\CheckAdditionTest\obj\Debug\CheckAdditionTest.pdb
