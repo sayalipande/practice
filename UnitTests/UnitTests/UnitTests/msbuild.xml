@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0"
+         DefaultTargets="Build"
+         xmlns="http://schemas.microsoft.com/developer/msbuild/2003"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://schemas.microsoft.com/developer/msbuild/2003 
+                          file:///C:/Windows/Microsoft.NET/Framework/v4.0.30319/Microsoft.Build.xsd">
+<Import Project="$(MSBuildThisFileDirectory)packages\MSBuildTasks.1.5.0.183\tools\MSBuild.Community.Tasks.Targets" />
+  <!-- <UsingTask TaskName="FluentMigrator.MSBuild.Migrate"
+             AssemblyFile="packages\FluentMigrator.Tools.1.3.0.0\tools\AnyCPU\40\FluentMigrator.MSBuild.dll" /> -->
+  <UsingTask TaskName="Nunit.Runner.MSBuild.nunit"
+             AssemblyFile="$(MSBuildThisFileDirectory)packages\MSBuildTasks.1.5.0.183\tools\MSBuild.Community.Tasks.dll" />
+    
+  <!-- Invoke NuGet to restore packages directory (which is excluded from Git) -->
+  <Target Name="RestorePackages">
+    <Exec Command='"$(MSBuildThisFileDirectory).nuget\nuget.exe" restore' />
+  </Target>
+
+  <!-- <Target Name="CopyConnectionStrings" Condition="'$(ConnectionStringsFile)' != ''">
+    <Exec Command="copy $(ConnectionStringsFile) .\ConnectionStrings.config" />
+  </Target> -->
+  
+  
+  
+  <Target Name="Build" DependsOnTargets="RestorePackages">
+    <MSBuild Projects="$(MSBuildThisFileDirectory)UnitTests.sln" />
+  </Target>
+
+  <!-- Create NuGet package of Virgil.Model -->
+  <!-- <Target Name="PackageModel" DependsOnTargets="Build">
+    <Exec Command='"$(MSBuildThisFileDirectory).nuget\nuget.exe" pack $(MSBuildThisFileDirectory)UnitTestProject1\UnitTestProject1.csproj -OutputDirectory bin' /> -->
+<!--    
+    <Exec Command="NuGet.exe push bin\Virgil.Model.*.nupkg -Server $(nuGetURL) -ApiKey $(nuGetApiKey)" />
+-->    
+  <!-- </Target> -->
+    
+  
+  <!-- <Target Name="DBMigrations" DependsOnTargets="Build">
+    <Message Text="Starting FluentMigrator Migration for: $(MSBuildThisFileDirectory)bin\Virgil.Database.dll"/>
+    <Migrate DatabaseType="postgres"             
+             Connection="Virgil"
+             Target="$(MSBuildThisFileDirectory)bin\Virgil.Database.dll" /> --> <!-- Task="rollback" -->
+  <!-- </Target> -->
+
+  <!-- <Target Name="DBMigrations_Rollback" DependsOnTargets="Build">
+    <Message Text="Rolling back latest FluentMigrator Migration for: $(MSBuildThisFileDirectory)bin\Virgil.Database.dll"/>
+    <Migrate DatabaseType="postgres"             
+             Connection="Virgil"
+             Target="$(MSBuildThisFileDirectory)bin\Virgil.Database.dll" 
+             Task="rollback" />
+  </Target> -->  
+  <!-- <ItemGroup>
+      <TestAssemblies Include="$(MSBuildThisFileDirectory)bin\UnitTestProject1.dll"/>
+  </ItemGroup> -->
+
+  <!-- <Target Name="UnitTest" DependsOnTargets="Build">
+      <Nunit Assemblies="@(TestAssemblies)" ToolPath="$(MSBuildThisFileDirectory)Tools\nunit"/>
+  </Target>  -->
+  <Target Name="UnitTest" DependsOnTargets="Build">
+  <CreateItem Include="$(MSBuildThisFileDirectory)bin\UnitTestProject1.dll">
+ </CreateItem>
+  <CreateItem Include= "D:\Practice\UnitTests\UnitTestProject1\UnitTestProject1.csproj">
+	<Output TaskParameter="Include" ItemName="TestAssembly" />
+	</CreateItem>
+ <NUnit Assemblies="@(TestAssembly)"/>
+ </Target>
+ 
+</Project>
