@@ -56,13 +56,13 @@
   <!-- <Target Name="UnitTest" DependsOnTargets="Build">
       <Nunit Assemblies="@(TestAssemblies)" ToolPath="$(MSBuildThisFileDirectory)Tools\nunit"/>
   </Target>  -->
-  <Target Name="UnitTest" DependsOnTargets="Build">
+  <!-- <Target Name="UnitTest" DependsOnTargets="Build">
   <CreateItem Include="$(MSBuildThisFileDirectory)bin\UnitTestProject1.dll">
  </CreateItem>
   <CreateItem Include= "D:\Practice\UnitTests\UnitTestProject1\UnitTestProject1.csproj">
 	<Output TaskParameter="Include" ItemName="TestAssembly" />
 	</CreateItem>
  <NUnit Assemblies="@(TestAssembly)"/>
- </Target>
+ </Target> -->
  
 </Project>
